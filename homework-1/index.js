@@ -533,14 +533,3 @@ function ask(question, yes, no) {
     () => console.log("Вы согласились."),
     () => console.log("Вы отменили выполнение.")
   );
-
-
-
-
-
-
-
-
-
-    
-
