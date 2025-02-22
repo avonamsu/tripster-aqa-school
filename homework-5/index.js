@@ -132,3 +132,17 @@ class Rabbit extends Object {
 
 let rabbit = new Rabbit("Кроль");
 console.log(rabbit.hasOwnProperty('name') ); // Ошибка
+
+//Раздел: Проверка класса: "instanceof"
+  //Task #1: Странный instanceof
+// Почему instanceof в примере ниже возвращает true? Мы же видим, что a не создан с помощью B().
+
+function A() {}
+function B() {}
+
+//instanceof проверяет цепочку прототипов, тут оба конструктора имеют один и тот же прототип и указывает на один объект
+A.prototype = B.prototype = {}; 
+
+let a = new A();
+
+console.log( a instanceof B ); // true
